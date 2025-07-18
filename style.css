@@ -1,0 +1,150 @@
+:root {
+  --bg-color: #0f172a;
+  --text-color: #ffffff;
+  --input-bg: #ffffff;
+  --input-text: #000000;
+  --primary-color: #2563eb;
+  --cancel-color: #6b7280;
+  --border-radius: 10px;
+  --font-size: 16px;
+  --padding: 16px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  padding-bottom: 2rem;
+}
+
+.header {
+  background-color: #1e293b;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--padding);
+  flex-wrap: wrap;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo {
+  height: 40px;
+}
+
+.page-title {
+  font-size: 1.5rem;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 10px;
+}
+
+.avatar {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: var(--padding);
+}
+
+.profile-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 0.5rem;
+  font-size: var(--font-size);
+}
+
+input,
+select {
+  padding: 0.7rem;
+  border: none;
+  border-radius: var(--border-radius);
+  font-size: var(--font-size);
+  background: var(--input-bg);
+  color: var(--input-text);
+}
+
+.checkbox-group {
+  margin-top: 0.5rem;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 0.6rem 1.4rem;
+  border: none;
+  border-radius: var(--border-radius);
+  font-size: var(--font-size);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn.cancel {
+  background-color: var(--cancel-color);
+  color: #fff;
+}
+
+.btn.submit {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .form-row {
+    flex-direction: column;
+  }
+
+  .form-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .header-right {
+    align-self: flex-end;
+  }
+}
